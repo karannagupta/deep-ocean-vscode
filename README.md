@@ -1,4 +1,4 @@
-# Deep Ocean
+# Deep Ocean Amber
 
 A dark VS Code theme with deep blue backgrounds (`#122738` / `#193549` / `#1f4662`)
 and amber accents (`#ffc600`).
@@ -15,7 +15,7 @@ add them to your `settings.json`:
 
 ```json
 {
-  "workbench.colorTheme": "Deep Ocean",
+  "workbench.colorTheme": "Deep Ocean Amber",
   "editor.fontFamily": "'FiraCode Nerd Font', Consolas, monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
@@ -40,12 +40,12 @@ Any monospace font works. If you'd rather not install one, drop
 ## Using different syntax colors
 
 The theme's workbench colors and its syntax highlighting are independent. To
-keep the Deep Ocean UI but colour code differently, override the syntax in your
-`settings.json`:
+keep the Deep Ocean Amber UI but colour code differently, override the syntax in
+your `settings.json`:
 
 ```json
 "editor.tokenColorCustomizations": {
-  "[Deep Ocean]": {
+  "[Deep Ocean Amber]": {
     "comments": "#7f848e",
     "strings": "#98c379",
     "keywords": "#c678dd",
@@ -57,13 +57,13 @@ keep the Deep Ocean UI but colour code differently, override the syntax in your
 }
 ```
 
-The `[Deep Ocean]` scope keeps the override from applying to your other themes.
-Those seven names are shorthand for common TextMate scopes; for finer control
-use `textMateRules` instead:
+The `[Deep Ocean Amber]` scope keeps the override from applying to your other
+themes. Those seven names are shorthand for common TextMate scopes; for finer
+control use `textMateRules` instead:
 
 ```json
 "editor.tokenColorCustomizations": {
-  "[Deep Ocean]": {
+  "[Deep Ocean Amber]": {
     "textMateRules": [
       {
         "scope": ["entity.name.tag", "support.type.property-name"],
@@ -79,7 +79,7 @@ find the scope name under the cursor.
 
 Note that this only works in one direction. Themes cannot inherit from each
 other across extensions, so there is no way to select a different theme and pull
-in Deep Ocean's workbench colors — the colors would have to be pasted into
+in Deep Ocean Amber's workbench colors — the colors would have to be pasted into
 `workbench.colorCustomizations` by hand.
 
 ## Editing colors
@@ -109,4 +109,4 @@ node build-theme.js --no-install
 ## Previewing
 
 Open this folder in VS Code and press `F5` to launch an Extension Development
-Host, then pick **Deep Ocean** from the theme picker.
+Host, then pick **Deep Ocean Amber** from the theme picker.

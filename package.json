@@ -1,20 +1,40 @@
 {
   "name": "deep-ocean-theme",
-  "displayName": "Deep Ocean",
+  "displayName": "Deep Ocean Amber",
   "description": "A dark theme with deep blue backgrounds and amber accents.",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "publisher": "karannagupta",
   "license": "MIT",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#122738",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karannagupta/deep-ocean-vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/karannagupta/deep-ocean-vscode/issues"
+  },
+  "homepage": "https://github.com/karannagupta/deep-ocean-vscode#readme",
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "dark",
+    "blue",
+    "cobalt",
+    "amber",
+    "ocean"
+  ],
   "contributes": {
     "themes": [
       {
-        "label": "Deep Ocean",
+        "label": "Deep Ocean Amber",
         "uiTheme": "vs-dark",
         "path": "./themes/deep-ocean-color-theme.json"
       }

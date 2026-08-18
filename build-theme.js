@@ -20,6 +20,22 @@ const path = require("path");
 const install = !process.argv.includes("--no-install");
 const root = __dirname;
 const read = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
+const extensions = path.join(os.homedir(), ".vscode/extensions");
+
+const pkgPath = path.join(root, "package.json");
+const pkg = read(pkgPath);
+const id = `${pkg.publisher}.${pkg.name}`;
+
+// Every symlink this extension owns under ~/.vscode/extensions, with the path
+// it currently resolves to.
+function installedLinks() {
+  return fs
+    .readdirSync(extensions)
+    .filter((e) => e.startsWith(`${id}-`))
+    .map((e) => path.join(extensions, e))
+    .filter((full) => fs.lstatSync(full).isSymbolicLink())
+    .map((full) => ({ full, points: fs.readlinkSync(full) }));
+}
 
 // --- theme file ------------------------------------------------------------
 
@@ -37,7 +53,7 @@ if (malformed.length) {
 
 fs.writeFileSync(
   path.join(root, "themes/deep-ocean-color-theme.json"),
-  JSON.stringify({ name: "Deep Ocean", type: "dark", include: "./base-syntax.json", colors }, null, 2) + "\n",
+  JSON.stringify({ name: "Deep Ocean Amber", type: "dark", include: "./base-syntax.json", colors }, null, 2) + "\n",
 );
 
 const dropped = Object.keys(overrides).length - Object.keys(colors).length;
@@ -45,12 +61,20 @@ console.log(
   `themes/deep-ocean-color-theme.json — ${Object.keys(colors).length} colors ` + `(${dropped} left to the base theme).`,
 );
 
-if (!install) process.exit(0);
+// A symlink recorded by an earlier build dangles as soon as this folder is
+// renamed or moved, and VS Code then drops the theme without saying why.
+const stale = installedLinks().filter((l) => l.points !== root);
+for (const { full, points } of stale) {
+  console.warn(`warning: ${path.basename(full)} points at ${points}`);
+}
+
+if (!install) {
+  if (stale.length) console.warn("run without --no-install to repoint it.");
+  process.exit(0);
+}
 
 // --- version bump ----------------------------------------------------------
 
-const pkgPath = path.join(root, "package.json");
-const pkg = read(pkgPath);
 const previous = pkg.version;
 const parts = previous.split(".").map(Number);
 parts[2] += 1;
@@ -59,17 +83,11 @@ fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + "\n");
 
 // --- symlink + registry ----------------------------------------------------
 
-const extensions = path.join(os.homedir(), ".vscode/extensions");
-const id = `${pkg.publisher}.${pkg.name}`;
 const folder = `${id}-${pkg.version}`;
 const target = path.join(extensions, folder);
 
-// Drop any older symlink for this extension so stale versions don't linger.
-for (const entry of fs.readdirSync(extensions)) {
-  if (!entry.startsWith(`${id}-`)) continue;
-  const full = path.join(extensions, entry);
-  if (fs.lstatSync(full).isSymbolicLink()) fs.unlinkSync(full);
-}
+// Drop every symlink we own, stale or not, so old versions don't linger.
+for (const { full } of installedLinks()) fs.unlinkSync(full);
 fs.symlinkSync(root, target);
 
 const registryPath = path.join(extensions, "extensions.json");

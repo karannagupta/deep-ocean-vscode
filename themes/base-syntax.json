@@ -1,6 +1,6 @@
 {
   "$comment": "Syntax colors from One Dark Pro 3.20.2 by Binaryify (MIT). See LICENSE. Workbench colors are not included.",
-  "name": "Deep Ocean syntax base",
+  "name": "Deep Ocean Amber syntax base",
   "type": "dark",
   "semanticHighlighting": true,
   "semanticTokenColors": {
