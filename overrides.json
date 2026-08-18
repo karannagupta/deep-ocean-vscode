@@ -118,7 +118,7 @@
   "textBlockQuote.background": "#193549",
   "textBlockQuote.border": "#0c7d9d",
   "textPreformat.background": "#193549",
-  "textLink.foreground": "#ffc600",
+  "textLink.foreground": "#4fb8ff",
   "welcomePage.tileBackground": "#193549",
   "welcomePage.tileHoverBackground": "#1f4662",
   "welcomePage.background": "#122738",
@@ -130,7 +130,6 @@
   "button.secondaryBackground": "#193549",
   "settings.dropdownBackground": "#193549",
   "settings.dropdownBorder": "#1f4662",
-  "settings.headerForeground": "#ffc600",
   "widget.border": "#193549",
   "statusBar.noFolderBackground": "#122738",
   "statusBar.debuggingBackground": "#0c7d9d",
@@ -190,5 +189,6 @@
   "statusBarItem.hoverForeground": "#ffffff",
   "statusBar.debuggingForeground": "#cccccc",
   "statusBar.noFolderForeground": "#cccccc",
-  "statusBarItem.remoteForeground": "#cccccc"
+  "statusBarItem.remoteForeground": "#cccccc",
+  "textLink.activeForeground": "#80fcff"
 }
