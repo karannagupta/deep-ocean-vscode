@@ -5,22 +5,21 @@ and amber accents (`#ffc600`).
 
 The palette comes from [Cobalt2](https://github.com/wesbos/cobalt2-vscode) by
 Wes Bos, and the syntax highlighting from
-[One Dark Pro](https://github.com/Binaryify/OneDark-Pro) by Binaryify — both
-MIT. See `LICENSE` for the notices.
+[One Dark Pro](https://github.com/Binaryify/OneDark-Pro) by Binaryify. See `LICENSE` for the notices.
 
 ## Screenshots
 
 #### The full workbench — explorer, editor, integrated terminal:
 
-![Workbench with JSON open](images/ss1.jpg)
+![Workbench with JSON open](https://raw.githubusercontent.com/karannagupta/deep-ocean-vscode/HEAD/images/ss1.jpg)
 
 #### Python:
 
-![Python source](images/ss_python.jpg)
+![Python source](https://raw.githubusercontent.com/karannagupta/deep-ocean-vscode/HEAD/images/ss_python.jpg)
 
 #### YAML
 
-![YAML with color decorators](images/ss2.jpg)
+![YAML with color decorators](https://raw.githubusercontent.com/karannagupta/deep-ocean-vscode/HEAD/images/ss2.jpg)
 
 ## Hermes Desktop
 
@@ -28,7 +27,7 @@ The same palette ported to Hermes Desktop,
 so a terminal-side session matches the editor. This is a separate application —
 nothing here affects VS Code.
 
-![Hermes Desktop using the Deep Ocean Amber palette](images/hermes.jpg)
+![Hermes Desktop using the Deep Ocean Amber palette](https://raw.githubusercontent.com/karannagupta/deep-ocean-vscode/HEAD/images/hermes.jpg)
 
 `hermes/deep-ocean.yaml` maps the same blues and amber onto Hermes' own surface
 names (banner, status bar, prompt, TUI panels). Copy it into your Hermes themes
