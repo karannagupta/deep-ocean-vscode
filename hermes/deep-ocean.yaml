@@ -1,0 +1,50 @@
+name: deep-ocean
+description: Deep Ocean — deep blue surfaces with amber accents
+
+colors:
+  # Panel / banner
+  banner_border: "#193549"
+  banner_title: "#ffc600"
+  banner_accent: "#ffc600"
+  banner_dim: "#7f848e"
+  banner_text: "#abb2bf"
+
+  # General UI
+  ui_accent: "#0c7d9d"
+  ui_label: "#abb2bf"
+  ui_ok: "#98c379"
+  ui_warn: "#d19a66"
+  ui_error: "#e06c75"
+
+  # Input / response
+  prompt: "#ffc600"
+  input_rule: "#0c7d9d"
+  response_border: "#0c7d9d"
+
+  # Status bar
+  status_bar_bg: "#122738"
+  status_bar_text: "#cccccc"
+  status_bar_strong: "#ffc600"
+  status_bar_dim: "#7f848e"
+  status_bar_good: "#98c379"
+  status_bar_warn: "#d19a66"
+  status_bar_bad: "#e06c75"
+  status_bar_critical: "#e06c75"
+
+  # Session
+  session_label: "#ffc600"
+  session_border: "#193549"
+
+  # TUI surfaces
+  voice_status_bg: "#193549"
+  selection_bg: "#1f4662"
+  completion_menu_bg: "#122738"
+  completion_menu_current_bg: "#1f4662"
+  completion_menu_meta_bg: "#193549"
+  completion_menu_meta_current_bg: "#1f4662"
+
+branding:
+  agent_name: Hermes Agent
+  prompt_symbol: "❯"
+
+tool_prefix: "●"
