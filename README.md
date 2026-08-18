@@ -24,7 +24,7 @@ MIT. See `LICENSE` for the notices.
 
 ## Hermes Desktop
 
-The same palette ported to [Hermes Desktop](https://github.com/karannagupta/hermes),
+The same palette ported to Hermes Desktop,
 so a terminal-side session matches the editor. This is a separate application —
 nothing here affects VS Code.
 
