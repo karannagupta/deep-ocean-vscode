@@ -1,0 +1,23 @@
+{
+  "name": "deep-ocean-theme",
+  "displayName": "Deep Ocean",
+  "description": "A dark theme with deep blue backgrounds and amber accents.",
+  "version": "0.0.1",
+  "publisher": "karannagupta",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Deep Ocean",
+        "uiTheme": "vs-dark",
+        "path": "./themes/deep-ocean-color-theme.json"
+      }
+    ]
+  }
+}
