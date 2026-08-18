@@ -8,7 +8,33 @@ Wes Bos, and the syntax highlighting from
 [One Dark Pro](https://github.com/Binaryify/OneDark-Pro) by Binaryify — both
 MIT. See `LICENSE` for the notices.
 
-## Recommended settings
+## Screenshots
+
+#### The full workbench — explorer, editor, integrated terminal:
+
+![Workbench with JSON open](images/ss1.jpg)
+
+#### Python:
+
+![Python source](images/ss_python.jpg)
+
+#### YAML
+
+![YAML with color decorators](images/ss2.jpg)
+
+## Hermes Desktop
+
+The same palette ported to [Hermes Desktop](https://github.com/karannagupta/hermes),
+so a terminal-side session matches the editor. This is a separate application —
+nothing here affects VS Code.
+
+![Hermes Desktop using the Deep Ocean Amber palette](images/hermes.jpg)
+
+`hermes/deep-ocean.yaml` maps the same blues and amber onto Hermes' own surface
+names (banner, status bar, prompt, TUI panels). Copy it into your Hermes themes
+directory to use it.
+
+## Nice to have settings
 
 The theme only sets colors. These settings are what it was tuned against —
 add them to your `settings.json`:
